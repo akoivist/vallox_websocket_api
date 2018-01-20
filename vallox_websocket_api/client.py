@@ -82,8 +82,7 @@ class Client:
     new_dict = {}
     for k, v in dict.iteritems():
       key = int(getattr(vlxDevConstants, k, k))
-      value = int(getattr(vlxDevConstants, v, v))
-      new_dict[key] = value
+      new_dict[key] = int(v)
 
     return new_dict
 
