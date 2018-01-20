@@ -110,6 +110,10 @@ class Client:
       if '_TEMP_' in key:
         value = to_celcius(value)
 
+      # convert numpy-types to python types
+      if isinstance(value, numpy.generic):
+        value = numpy.asscalar(value)
+
       metrics[key] = value
 
     return metrics
