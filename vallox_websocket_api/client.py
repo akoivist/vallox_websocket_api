@@ -51,7 +51,7 @@ def calculate_offset(aIndex):
 
 
 def to_celcius(value):
-  return round(value / 100 - 273.15, 1)
+  return round(value / 100.0 - 273.15, 1)
 
 
 class Client:
